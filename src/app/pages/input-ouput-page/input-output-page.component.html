@@ -1,0 +1,58 @@
+<po-page-default
+  p-title="Example using input and output"
+  [p-breadcrumb]="breadcrumbs">
+
+  <div class="po-row">
+    <div class="po-xl-12 po-lg-12 po-md-12 po-sm-12">
+      <po-container>
+        <p [innerText]="inputValue"></p>
+        <po-input
+          p-clean
+          name="input"
+          p-placeholder="Insert any value here"
+          (p-change-model)="changeInputValue($event)"
+          [(ngModel)]="inputValue"></po-input>
+      </po-container>
+    </div>
+  </div>
+
+  <!-- <div class="po-row">
+    <div class="po-xl-6 po-lg-6 po-md-6 po-sm-6">
+      <app-input-output-child-one
+        [value]="inputValue"
+        (transformedValue)="inputOneValue($event)"
+      >
+      </app-input-output-child-one>
+    </div>
+    <div class="po-xl-6 po-lg-6 po-md-6 po-sm-6">
+      <po-container>
+        <h3>{{valueChildOne}}</h3>
+      </po-container>
+    </div>
+  </div> -->
+
+  <!-- <div class="po-row">
+    <div class="po-xl-6 po-lg-6 po-md-6 po-sm-6">
+      <app-input-output-child-two>
+      </app-input-output-child-two>
+    </div>
+    <div class="po-xl-6 po-lg-6 po-md-6 po-sm-6">
+      <app-input-output-child-three>
+      </app-input-output-child-three>
+    </div>
+  </div> -->
+
+  <!-- <div class="po-row">
+    <div class="po-xl-12 po-lg-12 po-md-12 po-sm-12">
+      <app-input-output-child-four #childFour>
+      </app-input-output-child-four>
+    </div>
+  </div> -->
+
+  <!-- <div class="po-row">
+    <div class="po-xl-12 po-lg-12 po-md-12 po-sm-12">
+      <app-input-output-child-five>
+      </app-input-output-child-five>
+    </div>
+  </div> -->
+</po-page-default>

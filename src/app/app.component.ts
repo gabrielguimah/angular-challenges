@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { PoMenuItem } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-challenges';
+
+  constructor(private readonly router: Router) { }
+
+  readonly menus: Array<PoMenuItem> = [
+    { label: 'Input e Output', action: this.onClick.bind(this) }
+  ];
+
+  private onClick() {
+    console.log('Clicked in menu item');
+    this.router.navigate(['/inputOutput']);
+  }
+
 }
