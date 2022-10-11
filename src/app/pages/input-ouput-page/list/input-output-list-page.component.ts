@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { PoBreadcrumb } from '@po-ui/ng-components';
 
-import { BroadcastService } from '@core/services/broadcast.service';
+import { BroadcastService } from '@common/services/broadcast.service';
+import { ChildFiveComponent } from './components/child-five/child-five.component';
 
 @Component({
   selector: 'app-input-output-page',
-  templateUrl: './input-output-page.component.html'
+  templateUrl: './input-output-list-page.component.html'
 })
-export class InputOutputPageComponent implements OnInit {
+export class InputOutputListPageComponent implements OnInit {
 
-  // @ViewChild(ChildFiveComponent, { static: true }) childFive!: ChildFiveComponent;
+  @ViewChild(ChildFiveComponent, { static: true }) childFive!: ChildFiveComponent;
 
   public readonly breadcrumbs: PoBreadcrumb = {
     items: [
@@ -33,6 +34,8 @@ export class InputOutputPageComponent implements OnInit {
 
   changeInputValue(value: string) {
     this.broadcastService.value.next(value);
+
+    this.childFive.value = value;
   }
 
 }

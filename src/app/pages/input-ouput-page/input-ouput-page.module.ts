@@ -5,20 +5,20 @@ import { FormsModule } from '@angular/forms';
 
 import { PoButtonModule, PoContainerModule, PoFieldModule, PoPageModule } from '@po-ui/ng-components';
 
-import { InputOutputPageComponent } from './input-output-page.component';
-import { ChildOneComponent } from './components/child-one/child-one.component';
-import { ChildTwoComponent } from './components/child-two/child-two.component';
-import { ChildThreeComponent } from './components/child-three/child-three.component';
-import { ChildFourComponent } from './components/child-four/child-four.component';
-import { ChildFiveComponent } from './components/child-five/child-five.component';
+import { InputOutputListPageComponent } from './list/input-output-list-page.component';
+import { ChildOneComponent } from './list/components/child-one/child-one.component';
+import { ChildTwoComponent } from './list/components/child-two/child-two.component';
+import { ChildThreeComponent } from './list/components/child-three/child-three.component';
+import { ChildFourComponent } from './list/components/child-four/child-four.component';
+import { ChildFiveComponent } from './list/components/child-five/child-five.component';
 
 const routes: Routes = [
-  { path: '', component: InputOutputPageComponent }
+  { path: '', component: InputOutputListPageComponent }
 ]
 
 @NgModule({
   declarations: [
-    InputOutputPageComponent,
+    InputOutputListPageComponent,
     ChildOneComponent,
     ChildTwoComponent,
     ChildThreeComponent,

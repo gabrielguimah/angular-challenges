@@ -6,5 +6,4 @@ import { BehaviorSubject } from "rxjs";
 })
 export class BroadcastService {
   public readonly value: BehaviorSubject<string> = new BehaviorSubject<string>('');
-
 }

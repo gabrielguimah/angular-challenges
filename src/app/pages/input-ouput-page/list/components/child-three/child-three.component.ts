@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BroadcastService } from '@core/services/broadcast.service';
+import { BroadcastService } from '@common/services/broadcast.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-input-output-child-three',
@@ -12,6 +13,7 @@ export class ChildThreeComponent implements OnInit {
 
   constructor(private readonly broadcastService: BroadcastService) {
     this.broadcastService.value
+      .pipe(map(value => value.toLocaleLowerCase()))
       .subscribe(value => {
         this.value = value;
       });

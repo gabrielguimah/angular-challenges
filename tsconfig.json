@@ -23,8 +23,11 @@
       "dom"
     ],
     "paths": {
-      "@core/*": [
-        "./src/app/core/*"
+      "@common/*": [
+        "./src/app/common/*"
+      ],
+      "@api/*": [
+        "./src/app/api/*"
       ]
     }
   },

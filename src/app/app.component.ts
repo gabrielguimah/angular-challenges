@@ -13,12 +13,16 @@ export class AppComponent {
   constructor(private readonly router: Router) { }
 
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Input e Output', action: this.onClick.bind(this) }
+    { label: 'Input e Output', action: this.goInput.bind(this) },
+    { label: 'Users', action: this.goUsers.bind(this) }
   ];
 
-  private onClick() {
-    console.log('Clicked in menu item');
+  private goInput() {
     this.router.navigate(['/inputOutput']);
+  }
+
+  private goUsers() {
+    this.router.navigate(['/users']);
   }
 
 }
