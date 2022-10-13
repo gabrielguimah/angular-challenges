@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { PoPageModule, PoTableModule } from '@po-ui/ng-components';
+import { PoContainerModule, PoFieldModule, PoPageModule, PoTableModule } from '@po-ui/ng-components';
 
-
-import { InputOutputListPageComponent } from './list/user-list-page.component';
-import { UserReadPageComponent } from './read/user-read-page.component';
+import { UserListPageComponent } from './list/user-list-page.component';
 import { UserEditPageComponent } from './edit/user-edit-page.component';
+import { UserNewPageComponent } from './new/user-new-page.component';
 
 const routes: Routes = [
-  { path: '', component: InputOutputListPageComponent },
-  { path: ':id', component: UserReadPageComponent }
+  { path: '', component: UserListPageComponent },
+  { path: 'new', component: UserNewPageComponent },
+  { path: 'edit/:id', component: UserEditPageComponent }
 ];
 
 @NgModule({
   declarations: [
-    InputOutputListPageComponent,
-    UserReadPageComponent,
-    UserEditPageComponent
+    UserListPageComponent,
+    UserEditPageComponent,
+    UserNewPageComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +27,9 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     PoPageModule,
-    PoTableModule
+    PoTableModule,
+    PoContainerModule,
+    PoFieldModule
   ]
 })
 export class UserModule { }

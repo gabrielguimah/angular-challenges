@@ -4,11 +4,15 @@ import { delay, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserEditDeleteService {
+export class UserReadService {
 
   constructor() { }
 
-  delete(userId: number) {
-    return of(null).pipe(delay(700));
+  get(userId: number) {
+    return of({
+      id: 1,
+      name: 'Marcos'
+    })
+    .pipe(delay(500));
   }
 }
