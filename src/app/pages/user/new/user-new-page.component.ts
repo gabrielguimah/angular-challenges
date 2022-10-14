@@ -3,8 +3,8 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms
 
 import { PoBreadcrumb, PoPageAction } from "@po-ui/ng-components";
 
-import { UserInsertServiceService } from "@api/user/user-insert-service.service";
 import { ActivatedRoute, Router } from "@angular/router";
+import { UserInsertServiceService } from "@api/user/user-insert-service.service";
 
 @Component({
   selector: 'app-user-new-page',

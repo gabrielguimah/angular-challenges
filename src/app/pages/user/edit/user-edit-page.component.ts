@@ -4,9 +4,9 @@ import { ActivatedRoute, Router } from "@angular/router";
 
 import { PoBreadcrumb, PoPageAction } from "@po-ui/ng-components";
 
+import { UserEditServiceService } from "@api/user/user-edit-service.service";
 import { User } from "@api/user/user-list-service.service";
 import { UserReadService } from "@api/user/user-read.service";
-import { UserEditServiceService } from "@api/user/user-edit-service.service";
 
 @Component({
   selector: 'app-user-edit-page',
