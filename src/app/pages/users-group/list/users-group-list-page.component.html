@@ -1,0 +1,13 @@
+<po-page-default
+  [p-breadcrumb]="pageBreadcrumbs"
+  [p-actions]="pageActions"
+  p-title="Users Group list"
+>
+  <po-table
+    [p-loading]="loading"
+    [p-items]="usersGroups"
+    [p-columns]="tableColumns"
+    [p-actions]="tableActions"
+    [p-striped]="true"
+    [p-sort]="true"></po-table>
+</po-page-default>

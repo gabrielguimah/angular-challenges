@@ -14,7 +14,8 @@ export class AppComponent {
 
   readonly menus: Array<PoMenuItem> = [
     { label: 'Input e Output', action: this.goInput.bind(this) },
-    { label: 'Users', action: this.goUsers.bind(this) }
+    { label: 'Users', action: this.goUsers.bind(this) },
+    { label: 'Users Groups', action: this.goUsersGroups.bind(this) }
   ];
 
   private goInput() {
@@ -23,6 +24,10 @@ export class AppComponent {
 
   private goUsers() {
     this.router.navigate(['/users']);
+  }
+
+  private goUsersGroups() {
+    this.router.navigate(['/users_groups']);
   }
 
 }
