@@ -59,9 +59,8 @@ export class UsersGroupEditPageComponent {
             id: usersGroup.id,
             name: usersGroup.name
           });
-          this.loading = false
-          this.users = usersGroup.users
-          console.log(usersGroup)
+          this.users = usersGroup.users;
+          this.loading = false;
         },
         error: () => {
           this.router.navigate(['../../'], { relativeTo: this.activatedRoute });
