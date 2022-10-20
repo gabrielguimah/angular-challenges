@@ -1,9 +1,9 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { UserEditDeleteService } from "@api/user/user-delete-service.service";
-import { User, UserListServiceService } from "@api/user/user-list-service.service";
-import { PoBreadcrumb, PoPageAction, PoTableAction, PoTableColumn, PoTableComponent } from "@po-ui/ng-components";
-import { finalize } from "rxjs";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserEditDeleteService } from '@api/user/user-delete-service.service';
+import { User, UserListServiceService } from '@api/user/user-list-service.service';
+import { PoBreadcrumb, PoPageAction, PoTableAction, PoTableColumn, PoTableComponent } from '@po-ui/ng-components';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-user-list-page',

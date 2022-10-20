@@ -20,4 +20,13 @@ describe('ChildOneComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should send a new value in upper case when call sendNewValue', () => {
+    spyOn(component.transformedValue, 'emit');
+    component.value = 'beta'
+
+    component.sendNewValue();
+
+    expect(component.transformedValue.emit).toHaveBeenCalled();
+  });
 });

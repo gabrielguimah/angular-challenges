@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
+import { FormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 
 import { PoBreadcrumb, PoPageAction } from "@po-ui/ng-components";
 
@@ -30,7 +30,7 @@ export class UserNewPageComponent implements OnInit {
   constructor(
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
-    private fb: UntypedFormBuilder,
+    private fb: FormBuilder,
     private userInsertServiceService: UserInsertServiceService
   ) {
     this.createReactiveForm();
