@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor(private readonly router: Router) { }
 
-  readonly menus: Array<PoMenuItem> = [
+  menus: Array<PoMenuItem> = [
     { label: 'Input e Output', action: this.goInput.bind(this) },
     { label: 'Users', action: this.goUsers.bind(this) },
     { label: 'Users Groups', action: this.goUsersGroups.bind(this) }

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
+import { FormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { PoBreadcrumb, PoPageAction } from "@po-ui/ng-components";
@@ -34,7 +34,7 @@ export class UserEditPageComponent {
   constructor(
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
-    private readonly fb: UntypedFormBuilder,
+    private readonly fb: FormBuilder,
     private readonly userReadService: UserReadService,
     private readonly userEditServiceService: UserEditServiceService
   ) {
