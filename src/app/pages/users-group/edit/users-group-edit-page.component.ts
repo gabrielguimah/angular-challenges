@@ -2,7 +2,7 @@ import { UsersGroupReadService } from './../../../api/users_group/users-group-re
 import { UsersGroupEditServiceService } from './../../../api/users_group/users-group-edit-service.service';
 import { UsersGroup } from './../../../api/users_group/users-group-list-service.service';
 import { Component } from "@angular/core";
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
+import { FormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { PoBreadcrumb, PoPageAction, PoTableColumn } from "@po-ui/ng-components";
@@ -42,7 +42,7 @@ export class UsersGroupEditPageComponent {
   constructor(
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
-    private readonly fb: UntypedFormBuilder,
+    private readonly fb: FormBuilder,
     private readonly usersGroupReadService: UsersGroupReadService,
     private readonly usersGroupEditServiceService: UsersGroupEditServiceService
   ) {

@@ -1,6 +1,6 @@
 import { UsersGroupInsertServiceService } from './../../../api/users_group/users-group-insert-service.service';
 import { Component, OnInit } from "@angular/core";
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
+import { FormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 
 import { PoBreadcrumb, PoPageAction } from "@po-ui/ng-components";
 
@@ -30,7 +30,7 @@ export class UsersGroupNewPageComponent implements OnInit {
   constructor(
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
-    private fb: UntypedFormBuilder,
+    private fb: FormBuilder,
     private usersGroupInsertServiceService: UsersGroupInsertServiceService
   ) {
     this.createReactiveForm();
