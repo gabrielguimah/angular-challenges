@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 
@@ -10,9 +10,9 @@ import { UserReadService } from "@api/user/user-read.service";
 
 @Component({
   selector: 'app-user-edit-page',
-  templateUrl: './user-edit-page.component.html'
+  templateUrl: './user-edit-page.html'
 })
-export class UserEditPageComponent {
+export class UserEditPageComponent implements OnInit {
 
   user: User = {} as User;
 

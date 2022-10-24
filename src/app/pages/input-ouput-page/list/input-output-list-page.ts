@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { PoBreadcrumb } from '@po-ui/ng-components';
 
 import { BroadcastService } from '@common/services/broadcast.service';
@@ -6,9 +6,9 @@ import { ChildFiveComponent } from './components/child-five/child-five.component
 
 @Component({
   selector: 'app-input-output-page',
-  templateUrl: './input-output-list-page.component.html'
+  templateUrl: './input-output-list-page.html'
 })
-export class InputOutputListPageComponent implements OnInit {
+export class InputOutputListPageComponent {
 
   @ViewChild(ChildFiveComponent, { static: true }) childFive!: ChildFiveComponent;
 
@@ -24,9 +24,6 @@ export class InputOutputListPageComponent implements OnInit {
   valueChildOne = '';
 
   constructor(private readonly broadcastService: BroadcastService) { }
-
-  ngOnInit(): void {
-  }
 
   inputOneValue(value: string) {
     this.valueChildOne = value;

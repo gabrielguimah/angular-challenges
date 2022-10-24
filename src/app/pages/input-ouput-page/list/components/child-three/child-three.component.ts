@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { BroadcastService } from '@common/services/broadcast.service';
 import { map } from 'rxjs';
@@ -7,7 +7,7 @@ import { map } from 'rxjs';
   selector: 'app-input-output-child-three',
   templateUrl: './child-three.component.html'
 })
-export class ChildThreeComponent implements OnInit {
+export class ChildThreeComponent {
 
   value = '';
 
@@ -17,9 +17,6 @@ export class ChildThreeComponent implements OnInit {
       .subscribe(value => {
         this.value = value;
       });
-  }
-
-  ngOnInit(): void {
   }
 
 }

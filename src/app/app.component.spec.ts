@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, waitForAsync } from '@angular/core/testing';
 import { Router, Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -17,8 +17,9 @@ describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let router: Router;
+  let nativeElement: HTMLElement
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         CommonModule,
@@ -38,6 +39,7 @@ describe('AppComponent', () => {
 
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.debugElement.componentInstance;
+    nativeElement = fixture.debugElement.nativeElement;
 
     fixture.detectChanges();
   }));
@@ -46,16 +48,21 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should navigate to inputOutput', () => {
+  it('should create menu items', fakeAsync(async() => {
+    await fixture.whenStable();
+
+    expect(nativeElement.querySelectorAll('po-menu-item').length).toBe(2);
+  }));
+
+  it('Should navigate to menu links', () => {
     // Given
     spyOn(router, 'navigate');
 
+    // When
     for (let i = 0, len = component.menus.length; i < len; i++) {
-      // When
       component.menus[i].action?.apply(this);
     };
 
-    // Then
     expect(router.navigate).toHaveBeenCalledTimes(component.menus.length);
   });
 });

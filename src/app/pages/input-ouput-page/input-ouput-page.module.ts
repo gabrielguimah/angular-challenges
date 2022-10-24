@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { PoButtonModule, PoContainerModule, PoFieldModule, PoPageModule } from '@po-ui/ng-components';
 
-import { InputOutputListPageComponent } from './list/input-output-list-page.component';
+import { InputOutputListPageComponent } from './list/input-output-list-page';
 import { ChildOneComponent } from './list/components/child-one/child-one.component';
 import { ChildTwoComponent } from './list/components/child-two/child-two.component';
 import { ChildThreeComponent } from './list/components/child-three/child-three.component';
