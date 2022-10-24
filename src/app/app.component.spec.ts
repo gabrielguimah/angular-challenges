@@ -51,7 +51,7 @@ describe('AppComponent', () => {
   it('should create menu items', fakeAsync(async() => {
     await fixture.whenStable();
 
-    expect(nativeElement.querySelectorAll('po-menu-item').length).toBe(2);
+    expect(nativeElement.querySelectorAll('po-menu-item').length).toBe(3);
   }));
 
   it('Should navigate to menu links', () => {
