@@ -8,7 +8,7 @@ import { UserInsertServiceService } from "@api/user/user-insert-service.service"
 
 @Component({
   selector: 'app-user-new-page',
-  templateUrl: './user-new-page.component.html'
+  templateUrl: './user-new-page.html'
 })
 export class UserNewPageComponent implements OnInit {
 

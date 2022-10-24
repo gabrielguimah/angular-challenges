@@ -5,9 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PoContainerModule, PoFieldModule, PoPageModule, PoTableModule } from '@po-ui/ng-components';
 
-import { UserListPageComponent } from './list/user-list-page.component';
-import { UserEditPageComponent } from './edit/user-edit-page.component';
-import { UserNewPageComponent } from './new/user-new-page.component';
+import { UserListPageComponent } from './list/user-list-page';
+import { UserEditPageComponent } from './edit/user-edit-page';
+import { UserNewPageComponent } from './new/user-new-page';
 
 const routes: Routes = [
   { path: '', component: UserListPageComponent },

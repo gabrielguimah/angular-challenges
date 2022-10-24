@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ChildFiveComponent } from './components/child-five/child-five.component';
 
-import { InputOutputListPageComponent } from './input-output-list-page.component';
+import { InputOutputListPageComponent } from './input-output-list-page';
 
 describe('InputOutputListPageComponent', () => {
   let component: InputOutputListPageComponent;

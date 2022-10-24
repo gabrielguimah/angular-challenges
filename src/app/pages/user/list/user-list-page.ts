@@ -7,7 +7,7 @@ import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-user-list-page',
-  templateUrl: './user-list-page.component.html'
+  templateUrl: './user-list-page.html'
 })
 export class UserListPageComponent implements OnInit {
 

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { FormBuilder } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import { UserEditPageComponent } from "./user-edit-page.component";
+import { UserEditPageComponent } from "./user-edit-page";
 
 describe('UserEditPageComponent', () => {
   let component: UserEditPageComponent;
